@@ -32,7 +32,7 @@ public class User {
 																						// use-new-id-generator-mappings: false : jpa 기본 넘버링전략
 	private int id;	//시퀀스. 오토인크리
 	
-	@Column(nullable = false, length = 30)
+	@Column(nullable = false, length = 30, unique = true)
 	private String username;	
 	
 	@Column(nullable = false, length = 100)
