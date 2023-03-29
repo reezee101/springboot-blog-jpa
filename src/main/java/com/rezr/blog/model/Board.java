@@ -48,8 +48,7 @@ public class Board {
 	private User user;
 	
 							//LAZY : board select 해올 떄 relpy 테이블 조인해서 값 있어야지 들고옴(없으면 안들고옴)
-	@ManyToOne(fetch = FetchType.EAGER)	//many : board, one : user
-	@OneToMany(mappedBy = "board")	//mappedBy : 연관관계의 주인이 아님(fk가 아님 = db에 컬럼 만들지 않고 join으로 값얻기용임)
+	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER)	//mappedBy : 연관관계의 주인이 아님(fk가 아님 = db에 컬럼 만들지 않고 join으로 값얻기용임)
 	//@JoinColumn(name = "replyId") : 필요없음
 	private List<Reply> reply;
 	
